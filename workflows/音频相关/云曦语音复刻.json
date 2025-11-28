@@ -1,0 +1,256 @@
+{
+    "last_node_id": 15,
+    "last_link_id": 15,
+    "nodes": [
+        {
+            "id": 15,
+            "type": "CosyVoiceNode",
+            "pos": {
+                "0": 559,
+                "1": 115
+            },
+            "size": {
+                "0": 315,
+                "1": 214
+            },
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "tts_text",
+                    "type": "TEXT",
+                    "link": 12,
+                    "label": "tts_text"
+                },
+                {
+                    "name": "prompt_text",
+                    "type": "TEXT",
+                    "link": 13,
+                    "shape": 7,
+                    "label": "prompt_text"
+                },
+                {
+                    "name": "prompt_wav",
+                    "type": "AUDIO",
+                    "link": 14,
+                    "slot_index": 2,
+                    "shape": 7,
+                    "label": "prompt_wav"
+                },
+                {
+                    "name": "instruct_text",
+                    "type": "TEXT",
+                    "link": null,
+                    "shape": 7,
+                    "label": "instruct_text"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "AUDIO",
+                    "type": "AUDIO",
+                    "links": [
+                        15
+                    ],
+                    "slot_index": 0,
+                    "shape": 3,
+                    "label": "AUDIO"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "CosyVoiceNode"
+            },
+            "widgets_values": [
+                1,
+                "3s极速复刻",
+                "中文女",
+                1407,
+                "randomize"
+            ]
+        },
+        {
+            "id": 12,
+            "type": "TextNode",
+            "pos": {
+                "0": 53,
+                "1": 401
+            },
+            "size": {
+                "0": 400,
+                "1": 200
+            },
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "TEXT",
+                    "type": "TEXT",
+                    "links": [
+                        13
+                    ],
+                    "slot_index": 0,
+                    "shape": 3,
+                    "label": "TEXT"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "TextNode"
+            },
+            "widgets_values": [
+                "在我回去前，我想弄清楚一件事，我的直觉告诉我，你就是我的那位故人，你的言谈举止，做事习惯，甚至气息，都让我举得太熟悉了"
+            ]
+        },
+        {
+            "id": 2,
+            "type": "TextNode",
+            "pos": {
+                "0": 53,
+                "1": 126
+            },
+            "size": {
+                "0": 400,
+                "1": 200
+            },
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "TEXT",
+                    "type": "TEXT",
+                    "links": [
+                        12
+                    ],
+                    "slot_index": 0,
+                    "shape": 3,
+                    "label": "TEXT"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "TextNode"
+            },
+            "widgets_values": [
+                "云想衣裳花想容，春风拂槛露华浓。\n若非群玉山头见，会向瑶台月下逢。"
+            ]
+        },
+        {
+            "id": 13,
+            "type": "LoadAudio",
+            "pos": {
+                "0": 530,
+                "1": 435
+            },
+            "size": {
+                "0": 315,
+                "1": 124
+            },
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "AUDIO",
+                    "type": "AUDIO",
+                    "links": [
+                        14
+                    ],
+                    "shape": 3,
+                    "label": "AUDIO"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "LoadAudio"
+            },
+            "widgets_values": [
+                "云曦语音.WAV",
+                null,
+                ""
+            ]
+        },
+        {
+            "id": 14,
+            "type": "SaveAudio",
+            "pos": {
+                "0": 962.4000854492188,
+                "1": 165.59996032714844
+            },
+            "size": {
+                "0": 315,
+                "1": 100
+            },
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "audio",
+                    "type": "AUDIO",
+                    "link": 15,
+                    "label": "audio"
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "Node name for S&R": "SaveAudio"
+            },
+            "widgets_values": [
+                "audio/ComfyUI",
+                null
+            ]
+        }
+    ],
+    "links": [
+        [
+            12,
+            2,
+            0,
+            15,
+            0,
+            "TEXT"
+        ],
+        [
+            13,
+            12,
+            0,
+            15,
+            1,
+            "TEXT"
+        ],
+        [
+            14,
+            13,
+            0,
+            15,
+            2,
+            "AUDIO"
+        ],
+        [
+            15,
+            15,
+            0,
+            14,
+            0,
+            "AUDIO"
+        ]
+    ],
+    "groups": [],
+    "config": {},
+    "extra": {
+        "ds": {
+            "scale": 0.9646149645000015,
+            "offset": [
+                642.5789103628538,
+                342.08186639231826
+            ]
+        },
+        "workspace_info": {
+            "id": "7b4ee06c-3399-4582-aa63-d0fb312ee335"
+        }
+    },
+    "version": 0.4
+}

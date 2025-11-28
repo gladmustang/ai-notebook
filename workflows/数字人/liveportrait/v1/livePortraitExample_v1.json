@@ -1,0 +1,549 @@
+{
+    "last_node_id": 31,
+    "last_link_id": 69,
+    "nodes": [
+        {
+            "id": 18,
+            "type": "ImageConcatMulti",
+            "pos": {
+                "0": 860,
+                "1": 679
+            },
+            "size": {
+                "0": 210,
+                "1": 150
+            },
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image_1",
+                    "type": "IMAGE",
+                    "link": 32,
+                    "label": "image_1"
+                },
+                {
+                    "name": "image_2",
+                    "type": "IMAGE",
+                    "link": 67,
+                    "label": "image_2"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "links": [
+                        64
+                    ],
+                    "slot_index": 0,
+                    "shape": 3,
+                    "label": "images"
+                }
+            ],
+            "properties": {},
+            "widgets_values": [
+                2,
+                "right",
+                false,
+                null
+            ]
+        },
+        {
+            "id": 30,
+            "type": "LivePortraitProcess",
+            "pos": {
+                "0": 500,
+                "1": 249
+            },
+            "size": {
+                "0": 367.79998779296875,
+                "1": 338
+            },
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "pipeline",
+                    "type": "LIVEPORTRAITPIPE",
+                    "link": 58,
+                    "label": "pipeline"
+                },
+                {
+                    "name": "source_image",
+                    "type": "IMAGE",
+                    "link": 59,
+                    "label": "source_image"
+                },
+                {
+                    "name": "driving_images",
+                    "type": "IMAGE",
+                    "link": 60,
+                    "label": "driving_images"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "cropped_images",
+                    "type": "IMAGE",
+                    "links": [],
+                    "slot_index": 0,
+                    "shape": 3,
+                    "label": "cropped_images"
+                },
+                {
+                    "name": "full_images",
+                    "type": "IMAGE",
+                    "links": [
+                        67,
+                        68
+                    ],
+                    "slot_index": 1,
+                    "shape": 3,
+                    "label": "full_images"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "LivePortraitProcess"
+            },
+            "widgets_values": [
+                512,
+                2.3,
+                0,
+                -0.125,
+                true,
+                false,
+                1,
+                false,
+                1,
+                true,
+                true
+            ]
+        },
+        {
+            "id": 1,
+            "type": "DownloadAndLoadLivePortraitModels",
+            "pos": {
+                "0": -144,
+                "1": 218
+            },
+            "size": {
+                "0": 252,
+                "1": 33.333343505859375
+            },
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "live_portrait_pipe",
+                    "type": "LIVEPORTRAITPIPE",
+                    "links": [
+                        58
+                    ],
+                    "slot_index": 0,
+                    "shape": 3,
+                    "label": "live_portrait_pipe"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "DownloadAndLoadLivePortraitModels"
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 19,
+            "type": "ImageResizeKJ",
+            "pos": {
+                "0": 307,
+                "1": 679
+            },
+            "size": {
+                "0": 315,
+                "1": 242
+            },
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 30,
+                    "label": "image"
+                },
+                {
+                    "name": "get_image_size",
+                    "type": "IMAGE",
+                    "link": 68,
+                    "label": "get_image_size",
+                    "shape": 7
+                },
+                {
+                    "name": "width_input",
+                    "type": "INT",
+                    "link": null,
+                    "widget": {
+                        "name": "width_input"
+                    },
+                    "label": "width_input"
+                },
+                {
+                    "name": "height_input",
+                    "type": "INT",
+                    "link": null,
+                    "widget": {
+                        "name": "height_input"
+                    },
+                    "label": "height_input"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        32
+                    ],
+                    "slot_index": 0,
+                    "shape": 3,
+                    "label": "IMAGE"
+                },
+                {
+                    "name": "width",
+                    "type": "INT",
+                    "links": null,
+                    "shape": 3,
+                    "label": "width"
+                },
+                {
+                    "name": "height",
+                    "type": "INT",
+                    "links": null,
+                    "shape": 3,
+                    "label": "height"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "ImageResizeKJ"
+            },
+            "widgets_values": [
+                512,
+                512,
+                "nearest-exact",
+                false,
+                2,
+                0,
+                0
+            ]
+        },
+        {
+            "id": 4,
+            "type": "LoadImage",
+            "pos": {
+                "0": -189,
+                "1": 322
+            },
+            "size": {
+                "0": 272.85791015625,
+                "1": 331.60894775390625
+            },
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        59
+                    ],
+                    "slot_index": 0,
+                    "shape": 3,
+                    "label": "IMAGE"
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null,
+                    "shape": 3,
+                    "label": "MASK"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "LoadImage"
+            },
+            "widgets_values": [
+                "ComfyUI_temp_jchdm_00015_.png",
+                "image"
+            ]
+        },
+        {
+            "id": 23,
+            "type": "VHS_VideoCombine",
+            "pos": {
+                "0": 1118,
+                "1": 239
+            },
+            "size": [
+                1253.234130859375,
+                1414.1517178867402
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 64,
+                    "label": "images"
+                },
+                {
+                    "name": "audio",
+                    "type": "AUDIO",
+                    "link": 69,
+                    "label": "audio",
+                    "shape": 7
+                },
+                {
+                    "name": "meta_batch",
+                    "type": "VHS_BatchManager",
+                    "link": null,
+                    "label": "meta_batch",
+                    "shape": 7
+                },
+                {
+                    "name": "vae",
+                    "type": "VAE",
+                    "link": null,
+                    "shape": 7,
+                    "label": "vae"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Filenames",
+                    "type": "VHS_FILENAMES",
+                    "links": null,
+                    "shape": 3,
+                    "label": "Filenames"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "VHS_VideoCombine"
+            },
+            "widgets_values": {
+                "frame_rate": 24,
+                "loop_count": 0,
+                "filename_prefix": "LivePortrait",
+                "format": "video/h264-mp4",
+                "pix_fmt": "yuv420p",
+                "crf": 19,
+                "save_metadata": true,
+                "pingpong": false,
+                "save_output": false,
+                "videopreview": {
+                    "hidden": false,
+                    "paused": false,
+                    "params": {
+                        "filename": "LivePortrait_00003-audio.mp4",
+                        "subfolder": "",
+                        "type": "temp",
+                        "format": "video/h264-mp4",
+                        "frame_rate": 24
+                    }
+                }
+            }
+        },
+        {
+            "id": 8,
+            "type": "VHS_LoadVideo",
+            "pos": {
+                "0": -189,
+                "1": 740
+            },
+            "size": {
+                "0": 247.455078125,
+                "1": 262
+            },
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "meta_batch",
+                    "type": "VHS_BatchManager",
+                    "link": null,
+                    "label": "meta_batch",
+                    "shape": 7
+                },
+                {
+                    "name": "vae",
+                    "type": "VAE",
+                    "link": null,
+                    "shape": 7,
+                    "label": "vae"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        30,
+                        60
+                    ],
+                    "slot_index": 0,
+                    "shape": 3,
+                    "label": "IMAGE"
+                },
+                {
+                    "name": "frame_count",
+                    "type": "INT",
+                    "links": null,
+                    "shape": 3,
+                    "label": "frame_count",
+                    "slot_index": 1
+                },
+                {
+                    "name": "audio",
+                    "type": "AUDIO",
+                    "links": [
+                        69
+                    ],
+                    "shape": 3,
+                    "label": "audio",
+                    "slot_index": 2
+                },
+                {
+                    "name": "video_info",
+                    "type": "VHS_VIDEOINFO",
+                    "links": null,
+                    "shape": 3,
+                    "label": "video_info"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "VHS_LoadVideo"
+            },
+            "widgets_values": {
+                "video": "唱歌3.mp4",
+                "force_rate": 0,
+                "force_size": "Disabled",
+                "custom_width": 512,
+                "custom_height": 512,
+                "frame_load_cap": 360,
+                "skip_first_frames": 30,
+                "select_every_nth": 1,
+                "choose video to upload": "image",
+                "videopreview": {
+                    "hidden": false,
+                    "paused": false,
+                    "params": {
+                        "frame_load_cap": 360,
+                        "skip_first_frames": 30,
+                        "force_rate": 0,
+                        "filename": "唱歌3.mp4",
+                        "type": "input",
+                        "format": "video/mp4",
+                        "select_every_nth": 1
+                    }
+                }
+            }
+        }
+    ],
+    "links": [
+        [
+            30,
+            8,
+            0,
+            19,
+            0,
+            "IMAGE"
+        ],
+        [
+            32,
+            19,
+            0,
+            18,
+            0,
+            "IMAGE"
+        ],
+        [
+            58,
+            1,
+            0,
+            30,
+            0,
+            "LIVEPORTRAITPIPE"
+        ],
+        [
+            59,
+            4,
+            0,
+            30,
+            1,
+            "IMAGE"
+        ],
+        [
+            60,
+            8,
+            0,
+            30,
+            2,
+            "IMAGE"
+        ],
+        [
+            64,
+            18,
+            0,
+            23,
+            0,
+            "IMAGE"
+        ],
+        [
+            67,
+            30,
+            1,
+            18,
+            1,
+            "IMAGE"
+        ],
+        [
+            68,
+            30,
+            1,
+            19,
+            1,
+            "IMAGE"
+        ],
+        [
+            69,
+            8,
+            2,
+            23,
+            1,
+            "AUDIO"
+        ]
+    ],
+    "groups": [],
+    "config": {},
+    "extra": {
+        "ds": {
+            "scale": 0.45000000000000273,
+            "offset": [
+                1458.1278042338397,
+                431.39087371543917
+            ]
+        },
+        "workspace_info": {
+            "id": "0a9e33e7-bdf7-4725-b77d-baadf65abae5"
+        }
+    },
+    "version": 0.4
+}

@@ -1,0 +1,2 @@
+用admin身份跑cmd, 創建如下硬鏈接
+mklink /J D:\tools\ComfyUI_windows_portable\ComfyUI\user\default\workflows workflows

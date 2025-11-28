@@ -1,0 +1,212 @@
+{
+    "last_node_id": 16,
+    "last_link_id": 15,
+    "nodes": [
+        {
+            "id": 16,
+            "type": "CosyVoiceNode",
+            "pos": {
+                "0": 569,
+                "1": 117
+            },
+            "size": {
+                "0": 315,
+                "1": 214
+            },
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "tts_text",
+                    "type": "TEXT",
+                    "link": 13,
+                    "label": "tts_text"
+                },
+                {
+                    "name": "prompt_text",
+                    "type": "TEXT",
+                    "link": null,
+                    "shape": 7,
+                    "label": "prompt_text"
+                },
+                {
+                    "name": "prompt_wav",
+                    "type": "AUDIO",
+                    "link": null,
+                    "shape": 7,
+                    "label": "prompt_wav"
+                },
+                {
+                    "name": "instruct_text",
+                    "type": "TEXT",
+                    "link": 14,
+                    "slot_index": 3,
+                    "shape": 7,
+                    "label": "instruct_text"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "AUDIO",
+                    "type": "AUDIO",
+                    "links": [
+                        15
+                    ],
+                    "slot_index": 0,
+                    "shape": 3,
+                    "label": "AUDIO"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "CosyVoiceNode"
+            },
+            "widgets_values": [
+                2,
+                "自然语言控制",
+                "中文女",
+                3,
+                "randomize"
+            ]
+        },
+        {
+            "id": 2,
+            "type": "TextNode",
+            "pos": {
+                "0": 116,
+                "1": 126
+            },
+            "size": {
+                "0": 400,
+                "1": 200
+            },
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "TEXT",
+                    "type": "TEXT",
+                    "links": [
+                        13
+                    ],
+                    "slot_index": 0,
+                    "shape": 3,
+                    "label": "TEXT"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "TextNode"
+            },
+            "widgets_values": [
+                "云想衣裳花想容，[breath]春风拂槛露华浓。\n若非群玉<strong>山头</strong>见，会向瑶台<strong>月下</strong>逢。"
+            ]
+        },
+        {
+            "id": 15,
+            "type": "TextNode",
+            "pos": {
+                "0": 131,
+                "1": 427
+            },
+            "size": {
+                "0": 400,
+                "1": 200
+            },
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "TEXT",
+                    "type": "TEXT",
+                    "links": [
+                        14
+                    ],
+                    "shape": 3,
+                    "label": "TEXT"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "TextNode"
+            },
+            "widgets_values": [
+                "A poetess with a beautiful voice and slow speaking speed"
+            ]
+        },
+        {
+            "id": 14,
+            "type": "SaveAudio",
+            "pos": {
+                "0": 951,
+                "1": 126
+            },
+            "size": [
+                345.3718234873304,
+                118.86017584391584
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "audio",
+                    "type": "AUDIO",
+                    "link": 15,
+                    "label": "audio"
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "Node name for S&R": "SaveAudio"
+            },
+            "widgets_values": [
+                "audio/ComfyUI",
+                null
+            ]
+        }
+    ],
+    "links": [
+        [
+            13,
+            2,
+            0,
+            16,
+            0,
+            "TEXT"
+        ],
+        [
+            14,
+            15,
+            0,
+            16,
+            3,
+            "TEXT"
+        ],
+        [
+            15,
+            16,
+            0,
+            14,
+            0,
+            "AUDIO"
+        ]
+    ],
+    "groups": [],
+    "config": {},
+    "extra": {
+        "ds": {
+            "scale": 1.1671841070450066,
+            "offset": [
+                104.19089592433966,
+                124.3072520806939
+            ]
+        },
+        "workspace_info": {
+            "id": "a098b428-2537-4fc2-b35c-ea03e5489322"
+        }
+    },
+    "version": 0.4
+}

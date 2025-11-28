@@ -1,0 +1,256 @@
+{
+  "last_node_id": 30,
+  "last_link_id": 32,
+  "nodes": [
+    {
+      "id": 12,
+      "type": "TextNode",
+      "pos": {
+        "0": 53,
+        "1": 401
+      },
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "TEXT",
+          "type": "TEXT",
+          "links": [
+            13
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "TEXT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextNode"
+      },
+      "widgets_values": [
+        "你，你好狠心"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "TextNode",
+      "pos": {
+        "0": 53,
+        "1": 126
+      },
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "TEXT",
+          "type": "TEXT",
+          "links": [
+            12
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "TEXT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextNode"
+      },
+      "widgets_values": [
+        "你，你好狠心"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "SaveAudio",
+      "pos": {
+        "0": 972,
+        "1": 130
+      },
+      "size": {
+        "0": 315,
+        "1": 100
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 15,
+          "label": "audio"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio"
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        null
+      ]
+    },
+    {
+      "id": 15,
+      "type": "CosyVoiceNode",
+      "pos": {
+        "0": 559,
+        "1": 115
+      },
+      "size": {
+        "0": 315,
+        "1": 214
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "tts_text",
+          "type": "TEXT",
+          "link": 12,
+          "label": "tts_text"
+        },
+        {
+          "name": "prompt_text",
+          "type": "TEXT",
+          "link": 13,
+          "shape": 7,
+          "label": "prompt_text"
+        },
+        {
+          "name": "prompt_wav",
+          "type": "AUDIO",
+          "link": 14,
+          "slot_index": 2,
+          "shape": 7,
+          "label": "prompt_wav"
+        },
+        {
+          "name": "instruct_text",
+          "type": "TEXT",
+          "link": null,
+          "shape": 7,
+          "label": "instruct_text"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            15
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "AUDIO"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CosyVoiceNode"
+      },
+      "widgets_values": [
+        1,
+        "3s极速复刻",
+        "中文女",
+        699,
+        "randomize"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "LoadAudio",
+      "pos": {
+        "0": 545,
+        "1": 437
+      },
+      "size": {
+        "0": 315,
+        "1": 124
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            14
+          ],
+          "shape": 3,
+          "label": "AUDIO"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "你好狠心.WAV",
+        null,
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      12,
+      2,
+      0,
+      15,
+      0,
+      "TEXT"
+    ],
+    [
+      13,
+      12,
+      0,
+      15,
+      1,
+      "TEXT"
+    ],
+    [
+      14,
+      13,
+      0,
+      15,
+      2,
+      "AUDIO"
+    ],
+    [
+      15,
+      15,
+      0,
+      14,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.3073560549142818,
+      "offset": [
+        1758.5483311436024,
+        1492.6795154871058
+      ]
+    },
+    "workspace_info": {
+      "id": "f4c1aa13-2b52-43e8-a2eb-584f7d2fe36d"
+    }
+  },
+  "version": 0.4
+}

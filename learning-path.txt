@@ -1,0 +1,19 @@
+1. Wan22FMLF: https://github.com/wallen0322/ComfyUI-Wan22FMLF
+2. https://docs.comfy.org/tutorials/video/wan/wan2-2-s2v
+3. wan-svi 長視頻生成： https://github.com/vita-epfl/Stable-Video-Infinity
+4. wan - vace
+5. https://github.com/9nate-drake/Comfyui-SecNodes -- 取代sam2
+6. z-image （阿里 6B模型， 非常快速，和qwen image類似）
+7. wan-animate: 
+原生的流程對角色編譯比較嚴重，所以參考下面的鏈接：
+https://huggingface.co/eddy1111111/Wan_toolkit
+https://openart.ai/workflows/whippet_scratchy_33/wan22-animate-change-characters-or-backgrounds-long-videosv11/XEtHljdageIGGaYB5cpG
+https://www.reddit.com/r/StableDiffusion/comments/1nt8kxq/wan_22_animate_wanvideocontextoptions_test_1min/?tl=zh-hans
+
+FullDynamic_Ultimate_Fusion_Elite （添加视频动态）
+lightx2v_elite_it2v_animate_face （Lightx2v，用于减少步骤和生成时间）
+“lightx2v_elite_it2v_animate_face” 已经内置了 lightx2v 加速，因此无需其他加速 Lora 函数。该 Lora 函数还有助于保持参考角色的一致性，因此我建议强度值在 1.0 到 1.2 之间。
+WAN22_MoCap_fullbodyCOPY_ED（用于面部表情，缩小的尺寸更接近原始图像，增大的尺寸更接近参考视频）
+如果您需要与参考图像角色高度一致，我建议将“WAN22_MoCap_fullbodyCOPY ED”的强度值设置为 0.35 到 0.5。如果您希望更接近参考视频中的角色，则强度值 0.7 到 1 更佳。
+Wan2.2-Fun-A14B-InP-Fusion-Elite（奖励LoRA，混合HPS/MPS）
+
