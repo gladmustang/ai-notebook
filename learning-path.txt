@@ -1,5 +1,5 @@
 1. Wan22FMLF: https://github.com/wallen0322/ComfyUI-Wan22FMLF
-2. https://docs.comfy.org/tutorials/video/wan/wan2-2-s2v
+2. https://docs.comfy.org/tutorials/video/wan/wan2-2-s2v: w2.2 数字人
 3. wan-svi 長視頻生成： https://github.com/vita-epfl/Stable-Video-Infinity
 4. wan - vace
 5. https://github.com/9nate-drake/Comfyui-SecNodes -- 取代sam2
@@ -16,4 +16,14 @@ lightx2v_elite_it2v_animate_face （Lightx2v，用于减少步骤和生成时间
 WAN22_MoCap_fullbodyCOPY_ED（用于面部表情，缩小的尺寸更接近原始图像，增大的尺寸更接近参考视频）
 如果您需要与参考图像角色高度一致，我建议将“WAN22_MoCap_fullbodyCOPY ED”的强度值设置为 0.35 到 0.5。如果您希望更接近参考视频中的角色，则强度值 0.7 到 1 更佳。
 Wan2.2-Fun-A14B-InP-Fusion-Elite（奖励LoRA，混合HPS/MPS）
+
+8. https://huggingface.co/wikeeyang/Magic-Wan-Image-V2 用wan 2.2 生图
+   wan2.2的底噪模型可以单独使用来生图，直接接ksampler就可以
+
+9. StandIn
+https://huggingface.co/BowenXue/Stand-In
+
+10.
+
+
 
