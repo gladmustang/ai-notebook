@@ -23,7 +23,16 @@ Wan2.2-Fun-A14B-InP-Fusion-Elite（奖励LoRA，混合HPS/MPS）
 9. StandIn
 https://huggingface.co/BowenXue/Stand-In
 
-10.
+10. 背景音乐生成 ace-step
+
+11. 旁白生成 - index tilts
+
+12. 声效 foley
+
+13. n8n
+
+14. ComfyUI_MiniCPM-V-4_5 (类似于qwen3 vl的视觉推理模型，8b模型， 速度快，强于qwen2.5 vl 72b)
+https://github.com/IuvenisSapiens/ComfyUI_MiniCPM-V-4_5
 
 
 
