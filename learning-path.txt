@@ -34,5 +34,6 @@ https://huggingface.co/BowenXue/Stand-In
 14. ComfyUI_MiniCPM-V-4_5 (类似于qwen3 vl的视觉推理模型，8b模型， 速度快，强于qwen2.5 vl 72b)
 https://github.com/IuvenisSapiens/ComfyUI_MiniCPM-V-4_5
 
-
+15. upscaler collection:
+https://huggingface.co/Phips/4xNomosUniDAT_otf/tree/main
 
